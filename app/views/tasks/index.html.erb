@@ -1,0 +1,11 @@
+<h1>A lot of work still to do...</h1>
+<% @tasks.each  do |task| %>
+<p> <%= link_to task.name, task_path(task) %> already done ? <%= task.done%>  <%= link_to "Delete", task_path(task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %> <%= link_to "Edit(piaf)", edit_task_path(task) %>
+      </p>
+<%end%>
+<%= link_to "Create a new one", new_task_path %>
+
+
+
